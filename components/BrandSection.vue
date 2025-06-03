@@ -127,45 +127,60 @@
       </div>
       <h3>Colores Secundarios</h3>
       <div class="color-palette">
+
+        <div class="color-swatch">
+          <div class="color-display cesida-white"></div>
+          <div class="color-info">
+            <div class="color-name">Azul</div>
+            <div class="color-hex">#23ACCE</div>
+            <div class="color-rgb">RGB: 35, 172, 206</div>
+          </div>
+        </div>
         <div class="color-swatch">
           <div class="color-display cesida-black"></div>
           <div class="color-info">
-            <div class="color-name">Negro</div>
-            <div class="color-hex">#001100</div>
-            <div class="color-rgb">RGB: 0, 17, 0</div>
+            <div class="color-name">Rojo</div>
+            <div class="color-hex">#D44010</div>
+            <div class="color-rgb">RGB: 212, 64, 16</div>
           </div>
         </div>
 
         <div class="color-swatch">
           <div class="color-display cesida-dark-gray"></div>
           <div class="color-info">
-            <div class="color-name">Gris Oscuro</div>
-            <div class="color-hex">#595F59</div>
-            <div class="color-rgb">RGB: 89, 95, 89</div>
+            <div class="color-name">Amarillo</div>
+            <div class="color-hex">#F2B700</div>
+            <div class="color-rgb">RGB: 242, 183, 0</div>
           </div>
         </div>
 
         <div class="color-swatch">
           <div class="color-display cesida-light-gray"></div>
           <div class="color-info">
-            <div class="color-name">Gris Claro</div>
-            <div class="color-hex">#DFE2DF</div>
-            <div class="color-rgb">RGB: 223, 226, 223</div>
+            <div class="color-name">Verde</div>
+            <div class="color-hex">#169139</div>
+            <div class="color-rgb">RGB: 22, 145, 57</div>
           </div>
         </div>
 
+
+
         <div class="color-swatch">
-          <div class="color-display cesida-white"></div>
+          <div class="color-display cesida-pinks"></div>
           <div class="color-info">
-            <div class="color-name">Blanco</div>
-            <div class="color-hex">#ffffff</div>
-            <div class="color-rgb">RGB: 255, 255, 255</div>
+            <div class="color-name">Rosa</div>
+            <div class="color-hex">#F56DA9</div>
+            <div class="color-rgb">RGB: 245, 109, 169</div>
           </div>
         </div>
       </div>
 
       <h3>Usos de los Colores</h3>
       <ul>
+
+        <li>A la hora de usarse en el logotipo, debe haber siempre dos colores, ni uno ni tres en los iconos.</li>
+        <li>Es importante prestar atención en la zona de Logos para identificar el color de cada sección dentro de
+          CESIDA.</li>
         <li>No tiene por que haber un color predominante en la marca, si no que este se debería seleccionar bsandose en
           los valores del mismo dependiedo del objetivo del diseño.</li>
         <li>Se permite bajar el valor de los colores en margenes de 15 para aclarar los mismos si fueran a ser usados en
@@ -421,12 +436,6 @@
     </div>
 
 
-
-
-
-
-
-
     <!-- Imagenes -->
     <div v-if="section.id === 'images'">
       <div class="audio">
@@ -545,7 +554,7 @@
 
         <div id="appContent" class="imgInfo" :class="{ 'open': sectionStates.appContent }">
           <h3>Aplicaciones</h3>
-
+          <p>A continuación se puede ver el uso correcto de el sistema de diseño. Las imagenes pueden ir dentro de los iconos, a forma de mascara. Estas pueden ser en color o en blanco y negro, e interactuar tanto con la tipografía como los iconos. Se puede observar como este nuevo sistema podría plantear diferentes campañas con el tiempo, ayudandose de los elementos ya establecidos para ser fácilmente identificable.</p>
           <div class="vidsShow">
             <div class="image-example">
               <div class="image-container ">
@@ -577,7 +586,7 @@
                 <img src="../assets/img/examples/MockupInstagram.png" alt="">
               </div>
             </div>
-           
+
             <div class="image-example">
               <div class="image-container ">
                 <img src="../assets/img/examples/01 Free Tote Bag Mockup.png" alt="">
@@ -588,7 +597,7 @@
                 <img src="../assets/img/examples/01 Free Tote Bag Mockup4.png" alt="">
               </div>
             </div>
-             <div class="image-example">
+            <div class="image-example">
               <div class="image-container ">
                 <img src="../assets/img/examples/Cards_mockup9.png" alt="">
               </div>
@@ -600,7 +609,11 @@
             </div>
 
 
+
+
           </div>
+
+
         </div>
       </div>
 
@@ -784,19 +797,24 @@ const toggleSection = (sectionId) => {
 }
 
 .color-swatch .color-display.cesida-black {
-  background-color: #001100;
+  background-color: #D44010;
 }
 
 .color-swatch .color-display.cesida-dark-gray {
-  background-color: #595F59;
+  background-color: #F2B700;
 }
 
 .color-swatch .color-display.cesida-light-gray {
-  background-color: #DFE2DF;
+  background-color: #169139;
 }
 
 .color-swatch .color-display.cesida-white {
-  background-color: #ffffff;
+  background-color: #23ACCE;
+
+}
+
+.color-swatch .color-display.cesida-pinks {
+  background-color: #F56DA9;
 
 }
 
@@ -1047,7 +1065,7 @@ const toggleSection = (sectionId) => {
 }
 
 .imgInfo.open {
-  max-height: 2000px;
+  max-height: 10000px;
   /* Valor alto para asegurar que todo el contenido sea visible */
   opacity: 1;
   transform: translateY(0);
@@ -1057,16 +1075,16 @@ const toggleSection = (sectionId) => {
 
 @media (max-width: 768px) {
   .vidsShow {
- width: 100%;
-  flex-direction: column;
-  align-items: center;
-}
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 
 
 
-.image-example {
-  width: 100%;
-}
+  .image-example {
+    width: 100%;
+  }
 
 
 }

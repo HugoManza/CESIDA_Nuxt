@@ -71,7 +71,18 @@
 }
 
 .designList a:hover {
-    
+
     color: gray;
+}
+
+@media (max-width: 768px) {
+    .brandCont {
+        display: none;
+    }
+
+    .designList a {
+        align-items: center;
+        justify-content: center;
+    }
 }
 </style>
